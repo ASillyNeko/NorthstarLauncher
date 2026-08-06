@@ -299,7 +299,7 @@ static void __fastcall h_PrintSquirrelError(void* sqvm)
 	static ConVar* Cvar_fatal_script_errors = g_pCVar->FindVar("fatal_script_errors");
 	static ConVar* Cvar_fatal_script_errors_server = g_pCVar->FindVar("fatal_script_errors_server");
 	if (Cvar_fatal_script_errors_server->GetInt() == 1 ||
-		(Cvar_fatal_script_errors->GetBool() && Cvar_fatal_script_errors_server->GetInt() != 0))
+		(Cvar_fatal_script_errors->GetBool() && !Cvar_fatal_script_errors_server->GetBool()))
 	{
 		NS::log::FlushLoggers();
 		abort();
