@@ -22,7 +22,7 @@ static int (__fastcall* o_pOnAttackEvent)(int a1, Vector3* pos, int a3, float a4
 static int __fastcall h_pOnAttackEvent(int a1, Vector3* pos, int a3, float a4)
 {
 	if (pos == NULL)
-		return 0;
+		return -1;
 
 	return o_pOnAttackEvent(a1, pos, a3, a4);
 }
