@@ -18,7 +18,7 @@ static bool __fastcall h_pOnWeaponAttack(CWeaponX* weapon, int a2)
 	return o_pOnWeaponAttack(weapon, a2);
 }
 
-static int (__fastcall* o_pOnAttackEvent)(int a1, Vector3* pos, int a3, float a4) = nullptr;
+static int(__fastcall* o_pOnAttackEvent)(int a1, Vector3* pos, int a3, float a4) = nullptr;
 static int __fastcall h_pOnAttackEvent(int a1, Vector3* pos, int a3, float a4)
 {
 	if (pos == NULL)
