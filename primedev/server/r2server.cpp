@@ -21,7 +21,7 @@ static bool __fastcall h_pOnWeaponAttack(CWeaponX* weapon, int a2)
 static int(__fastcall* o_pOnDamageEvent)(int a1, Vector3* pos, int a3, float a4) = nullptr;
 static int __fastcall h_pOnDamageEvent(int a1, Vector3* pos, int a3, float a4)
 {
-	if (pos == nullptr)
+	if (!pos)
 		return -1;
 
 	return o_pOnDamageEvent(a1, pos, a3, a4);
